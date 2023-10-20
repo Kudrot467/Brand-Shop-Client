@@ -9,13 +9,13 @@ const Brand = ({ brand }) => {
       <Link to={`/brandDetails/${bname}`}>
       <div className="card lg:card-side w-full bg-base-100 shadow-xl">
         <figure className="h-[150px]">
-          <img className=""
+          <img className="w-full h-full"
             src={bpic}
             alt="Album"
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{bname}</h2>
+          <h2 className="card-title text-[#52BA5D]">{bname}</h2>
         </div>
       </div>
       </Link>

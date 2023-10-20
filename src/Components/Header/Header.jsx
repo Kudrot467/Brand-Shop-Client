@@ -3,12 +3,9 @@ import Navbar from "../Navbar/Navbar";
 const Header = () => {
     return (
         <div>
-             <div className="mx-auto flex justify-between p-4 items-center flex-col md:flex-row">
-        <a className="btn btn-ghost normal-case text-2xl text-[#52BA5D]">
-         Brand shop
-        </a>
+             <div className="mx-auto flex justify-center p-4 items-center flex-col md:flex-row">
         <img
-          className="w-[220px] h-[100px]"
+          className="w-[220px] h-[80px] rounded-xl"
           src="https://i.ibb.co/wg4Zvyd/Brand-Shop.png"
           alt=""
         />

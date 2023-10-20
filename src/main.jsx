@@ -11,6 +11,8 @@ import AddProduct from './Components/Add Product/AddProduct.jsx';
 import BrandDetails from './Components/BrandDetails/BrandDetails.jsx';
 import Update from './Components/Update/Update.jsx';
 import AuthProvider from './Components/Providers/AuthProvider.jsx';
+import Login from './Components/Login/Login.jsx';
+import Register from './Components/Register/Register.jsx';
 
 const router = createBrowserRouter([
   {
@@ -22,6 +24,15 @@ const router = createBrowserRouter([
         element:<Home></Home>,
         loader:()=>fetch('http://localhost:5000/brands')
       },
+      {
+        
+          path:'/login',
+          element:<Login></Login>,
+      },
+      {
+        path:'/register',
+        element:<Register></Register>,
+    },
       {
         path:'/addProduct',
         element:<AddProduct></AddProduct>
