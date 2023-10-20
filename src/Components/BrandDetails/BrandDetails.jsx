@@ -14,34 +14,35 @@ const BrandDetails = () => {
   if (brand_name == "Samsung") {
     return (
       <div className="max-w-6xl mx-auto p-2">
-        <p className="text-3xl font-semibold text-center text-red-700">No Products are Available</p>
-       <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mx-auto">
-
-       {products.map((product) => (
-          <div key={product._id}>
-            <div className="card card-compact bg-base-100 shadow-xl w-full">
-              <figure className="w-full h-full">
-                <img src={product.image_url} alt="Shoes" />
-              </figure>
-              <div className="card-body">
-                <h2 className="card-title text-[#52BA5D]">{product.name}</h2>
-                <p>{product.short_description}</p>
-                <p className="text-[#52BA5D] font-bold">${product.price}</p>
-                <div className="card-actions justify-end">
-                  <button className="btn text-[#52BA5D] hover:bg-[#52BA5D] hover:text-white">
-                    Details
-                  </button>
-                  <Link to={`/update/${product._id}`}>
+        <p className="text-3xl font-semibold text-center text-red-700">
+          No Products are Available
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mx-auto">
+          {products.map((product) => (
+            <div key={product._id}>
+              <div className="card card-compact bg-base-100 shadow-xl w-full">
+                <figure className="w-full h-full">
+                  <img src={product.image_url} alt="Shoes" />
+                </figure>
+                <div className="card-body">
+                  <h2 className="card-title text-[#52BA5D]">{product.name}</h2>
+                  <p>{product.short_description}</p>
+                  <p className="text-[#52BA5D] font-bold">${product.price}</p>
+                  <div className="card-actions justify-end">
                     <button className="btn text-[#52BA5D] hover:bg-[#52BA5D] hover:text-white">
-                      Update
+                      Details
                     </button>
-                  </Link>
+                    <Link to={`/update/${product._id}`}>
+                      <button className="btn text-[#52BA5D] hover:bg-[#52BA5D] hover:text-white">
+                        Update
+                      </button>
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-       </div>
+          ))}
+        </div>
       </div>
     );
   }
@@ -50,9 +51,9 @@ const BrandDetails = () => {
 
   return (
     <div className="max-w-6xl mx-auto p-2">
-        <div className="p-2 w-full">
+      <div className="p-2 w-full">
         <Banner></Banner>
-        </div>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {products.map((product) => (
           <div key={product._id}>
@@ -62,19 +63,30 @@ const BrandDetails = () => {
               </figure>
               <div className="card-body">
                 <h2 className="card-title text-[#52BA5D]">{product.name}</h2>
-                <p>{product.short_description}</p>
-                <p className="text-[#52BA5D] font-bold">${product.price}</p>
+                <div className="text-lg">
+                  {product.short_description.length > 30 ? (
+                    <p className="flex justify-between">
+                      {product.short_description.slice(0, 30)}
+                      <div className="card-actions justify-end">
+                        <Link className="text-[#52BA5D] underline text-2xl" to={`/productDetails/${product._id}`}>
+                            Details
+                        </Link>
+                      </div>
+                    </p>
+                  ) : (
+                    <p>{product.short_description}</p>
+                  )}
+                    <p className="text-[#52BA5D] font-bold">${product.price}</p>
+                </div>
                 <div className="card-actions justify-end">
-                  <button className="btn text-[#52BA5D] hover:bg-[#52BA5D] hover:text-white">
-                    Details
-                  </button>
-                  <Link to={`/update/${product._id}`}>
+                   <Link to={`/update/${product._id}`}>
                     <button className="btn text-[#52BA5D] hover:bg-[#52BA5D] hover:text-white">
                       Update
                     </button>
                   </Link>
-                </div>
+                  </div>
               </div>
+              
             </div>
           </div>
         ))}

@@ -13,6 +13,7 @@ import Update from './Components/Update/Update.jsx';
 import AuthProvider from './Components/Providers/AuthProvider.jsx';
 import Login from './Components/Login/Login.jsx';
 import Register from './Components/Register/Register.jsx';
+import ProductDetails from './ProductDetails/ProductDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
       {
         path:'/addProduct',
         element:<AddProduct></AddProduct>
+      },
+      {
+        path:'/productDetails/:id',
+        element:<ProductDetails></ProductDetails>,
+        loader:()=>fetch('http://localhost:5000/products')
       },
       {
         path:'/brandDetails/:brand_name',
