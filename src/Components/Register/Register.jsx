@@ -6,7 +6,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
-  const { createUser } = useContext(AuthContext);
+  const { createUser,setProfilePicture } = useContext(AuthContext);
   const [registerError, setRegisterError] = useState("");
   const [success, setSuccess] = useState("");
   const [showPassword,setShowPassWord]=useState(false)
@@ -15,6 +15,7 @@ const Register = () => {
     const form = new FormData(e.currentTarget);
     const firstName = form.get("firstName");
     const lastName = form.get("lastName");
+    const image_url=form.get("image_url");
     const email = form.get("email");
     const password = form.get("password");
     console.log(firstName, lastName, email, password);
@@ -36,7 +37,8 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
-        setSuccess(toast("user created successfully"));
+        setProfilePicture(image_url)
+       toast("user created successfully");
       })
       .catch((error) => {
         console.log(error.message);
@@ -125,7 +127,7 @@ const Register = () => {
               </label>
               <div className="relative">
                 <input 
-                  type={showPassword ? "text" : "password"}
+                  type={showPassword ? "text" : "password" }
                   placeholder="password"
                   name="password"
                   className="input input-bordered w-full border-[#52BA5D]"
