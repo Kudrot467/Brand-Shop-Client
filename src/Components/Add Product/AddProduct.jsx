@@ -37,108 +37,100 @@ const AddProduct = () => {
     }
 
   return (
-    <div>
+    <div className="max-w-7xl mx-auto p-2">
       <div>
-        <h1 className="text-center text-3xl font-bold">
-          this is the add product section
-        </h1>
         <div>
           <form action="" onSubmit={handleFormSubmit}>
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Image URL</span>
+                <span className="label-text text-[#52BA5D] font-medium text-lg">Image URL</span>
               </label>
               <input
                 type="text"
                 placeholder="Image url"
                 name="image_url"
-                className="input input-bordered input-primary w-full max-w-xs"
+                className="input input-bordered border-[#52BA5D] w-3/4 md:w-full lg:w-1/2"
                 required
               />
             </div>
-            <br />
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Name</span>
+                <span className="label-text text-[#52BA5D] font-medium text-lg">Name</span>
               </label>
               <input
                 type="text"
                 placeholder="Name"
                 name="name"
-                className="input input-bordered input-primary w-full max-w-xs"
+                className="input input-bordered border-[#52BA5D] w-3/4 md:w-full lg:w-1/2"
                 required
               />
             </div>
-            <br />
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Brand Name</span>
+                <span className="label-text text-[#52BA5D] font-medium text-lg">Brand Name</span>
               </label>
               <input
                 type="text"
                 placeholder="Brand Name"
                 name="brand_name"
-                className="input input-bordered input-primary w-full max-w-xs"
+                className="input input-bordered border-[#52BA5D] w-3/4 md:w-full lg:w-1/2"
                 required
               />
             </div>
-           
+            <br />
             <select
               name="type"
-              className="select select-primary w-full max-w-xs"
+              className="select select-primary  text-[#52BA5D]  text-lg border-[#52BA5D] w-3/4 md:w-full lg:w-1/2"
             >
-              <option disabled selected>
+              <option disabled selected className="text-[#52BA5D] font-medium text-lg">
                 Types of products?
               </option>
-              <option>Phones</option>
-              <option>Headphones</option>
-              <option> Smart TV</option>
-              <option>Computer</option>
+              <option className="text-[#52BA5D] font-medium text-lg">Phones</option>
+              <option className="text-[#52BA5D] font-medium text-lg">Headphones</option>
+              <option className="text-[#52BA5D] font-medium text-lg"> Smart TV</option>
+              <option className="text-[#52BA5D] font-medium text-lg">Computer</option>
             </select>
             <br />
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Price</span>
+                <span className="label-text text-[#52BA5D] font-medium text-lg">Price</span>
               </label>
               <input
                 type="text"
                 placeholder="Price"
                 name="price"
-                className="input input-bordered input-primary w-full max-w-xs"
+                className="input input-bordered border-[#52BA5D] w-3/4 md:w-full lg:w-1/2"
                 required
               />
             </div>
-            <br />
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Short description</span>
+                <span className="label-text text-[#52BA5D] font-medium text-lg">Short description</span>
               </label>
               <input
                 type="text"
                 placeholder="Short description"
                 name="short_description"
-                className="input input-bordered input-primary w-full max-w-xs"
+                className="input input-bordered border-[#52BA5D] w-3/4 md:w-full lg:w-1/2"
                 required
               />
             </div>
-            <br />
             <div className="form-control">
               <label className="label">
-                <span className="label-text">Rating</span>
+                <span className="label-text text-[#52BA5D] font-medium text-lg">Rating</span>
               </label>
               <input
                 type="text"
                 placeholder="Rating"
                 name="rating"
-                className="input input-bordered input-primary w-full max-w-xs"
+                className="input input-bordered border-[#52BA5D] w-3/4 md:w-full lg:w-1/2"
                 required
               />
             </div>
-            <br />
             <input
               type="submit"
               value="Add Product"
-              className="btn btn-secondary"
+              className="btn bg-[#52BA5D] font-medium text-lg text-white "
             />
           </form>
         </div>

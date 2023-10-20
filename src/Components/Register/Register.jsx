@@ -46,7 +46,7 @@ const Register = () => {
 
   return (
     <div className="hero min-h-screen bg-[#52BA5D]">
-      <div className="hero-content md:w-3/4 lg:w-1/2 flex-col">
+      <div className="hero-content md:w-3/4 lg:w-full flex-col">
         <div className="card flex-shrink-0 w-full md:w-3/4 lg:w-1/2 shadow-2xl bg-base-100">
           <form onSubmit={handleRegister} className="card-body">
             <div className="flex items-center justify-around">
@@ -56,7 +56,9 @@ const Register = () => {
                 alt=""
               />
             </div>
-            <div className="form-control">
+           <div className="flex flex-col md:flex-col lg:flex-row gap-1">
+
+           <div className="form-control w-full">
               <label className="label">
                 <span className="label-text text-[#52BA5D] font-medium text-lg">
                   First Name
@@ -70,7 +72,7 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="form-control">
+            <div className="form-control w-full">
               <label className="label">
                 <span className="label-text text-[#52BA5D] font-medium text-lg">
                   Last Name
@@ -84,6 +86,23 @@ const Register = () => {
                 required
               />
             </div>
+            
+           </div>
+            <div>
+
+            <div className="form-control">
+            <label className="label">
+                <span className="label-text text-[#52BA5D] font-medium text-lg">Image URL</span>
+              </label>
+              <input
+                type="text"
+                placeholder="Image url"
+                name="image_url"
+                className="input input-bordered border-[#52BA5D]"
+                required
+              />
+            </div>
+
             <div className="form-control">
               <label className="label">
                 <span className="label-text text-[#52BA5D] font-medium text-lg">
@@ -116,6 +135,7 @@ const Register = () => {
                   {showPassword ? <FaEyeSlash></FaEyeSlash> : <FaEye></FaEye>}
                 </span>
               </div>
+            </div>
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">
                   Forgot password?
