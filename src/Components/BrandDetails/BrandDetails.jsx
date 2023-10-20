@@ -1,4 +1,5 @@
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import Banner from "../Banner/Banner";
 
 const BrandDetails = () => {
   const allProducts = useLoaderData();
@@ -49,6 +50,9 @@ const BrandDetails = () => {
 
   return (
     <div className="max-w-6xl mx-auto p-2">
+        <div className="p-2 w-full">
+        <Banner></Banner>
+        </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {products.map((product) => (
           <div key={product._id}>
