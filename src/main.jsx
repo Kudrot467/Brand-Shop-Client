@@ -15,11 +15,14 @@ import Login from './Components/Login/Login.jsx';
 import Register from './Components/Register/Register.jsx';
 import ProductDetails from './ProductDetails/ProductDetails.jsx';
 import MyCart from './Components/MyCart/MyCart.jsx';
+import PrivateRoute from './Components/PrivateRoutes/PrivateRoutes.jsx';
+import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:'/',
@@ -37,11 +40,11 @@ const router = createBrowserRouter([
     },
       {
         path:'/addProduct',
-        element:<AddProduct></AddProduct>
+        element:<PrivateRoute><AddProduct></AddProduct></PrivateRoute>
       },
       {
         path:'/myCart',
-        element:<MyCart></MyCart>,
+        element:<PrivateRoute><MyCart></MyCart></PrivateRoute>,
         loader:()=>fetch('http://localhost:5000/cart')
       },
       {
