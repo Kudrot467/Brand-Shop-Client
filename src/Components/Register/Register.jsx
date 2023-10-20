@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 const Register = () => {
   const { createUser,setProfilePicture } = useContext(AuthContext);
   const [registerError, setRegisterError] = useState("");
-  const [success, setSuccess] = useState("");
+
   const [showPassword,setShowPassWord]=useState(false)
   const handleRegister = (e) => {
     e.preventDefault();
@@ -161,7 +161,7 @@ const Register = () => {
               {registerError}
             </p>
           )}
-          {success && <ToastContainer></ToastContainer>}
+           <ToastContainer></ToastContainer>
         </div>
       </div>
     </div>
