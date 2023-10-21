@@ -1,14 +1,21 @@
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Brand = ({ brand }) => {
   const { bpic, bname } = brand;
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
-    <div>
+    <div >
       <Link to={`/brandDetails/${bname}`}>
-      <div className="card lg:card-side w-full bg-base-100 shadow-xl">
+      <div className="card lg:card-side w-full overflow-x-auto bg-base-100 shadow-xl" data-aos="fade-right">
         <figure className="h-[150px]">
-          <img className="w-full h-full"
+          <img className= "w-full h-full md:h-auto"
             src={bpic}
             alt="Album"
           />
