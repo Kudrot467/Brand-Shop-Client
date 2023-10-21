@@ -21,7 +21,7 @@ const AddProduct = () => {
           brand_name,
         };
         console.log(product);
-        fetch("https://1001-brand-server-co5flblq6-roses-projects-57afa947.vercel.app/products", {
+        fetch("https://1001-brand-server.vercel.app/products", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(product),

@@ -24,14 +24,14 @@ const ProductDetails = () => {
       image_url,
       rating
     };
-    fetch("https://1001-brand-server-co5flblq6-roses-projects-57afa947.vercel.app/cart", {
+    fetch("https://1001-brand-server.vercel.app/cart", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(cartItems),
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        //console.log(data);
         if (data.insertedId) {
           Swal.fire(
             "Congrats!",

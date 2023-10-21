@@ -24,7 +24,7 @@ const Update = () => {
         };
         console.log(image_url);
         console.log(updatedProduct);
-        fetch(`https://1001-brand-server-co5flblq6-roses-projects-57afa947.vercel.app/products/${products._id}`, {
+        fetch(`https://1001-brand-server.vercel.app/products/${products._id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(updatedProduct),
