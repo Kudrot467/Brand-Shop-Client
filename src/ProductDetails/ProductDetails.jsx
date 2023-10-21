@@ -13,15 +13,16 @@ const ProductDetails = () => {
   const { image_url, name, type, short_description, rating } = detail;
   const email=user.email;
   const handleSendToCart = (detail, email) => {
-    const { name , brand_name, type , price ,image_url, rating } = detail
+    const { name , brand_name, type , price ,image_url, rating,_id } = detail;
     const cartItems = {
+      _id,
       email,
       name,
       brand_name,
       type ,
       price,
       image_url,
-      rating,
+      rating
     };
     fetch("http://localhost:5000/cart", {
       method: "POST",
@@ -43,7 +44,7 @@ const ProductDetails = () => {
 
   //console.log(detail);
   return (
-    <div>
+    <div className="max-w-7xl mx-auto">
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img src={image_url} className="w-1/2 rounded-lg shadow-2xl" />
