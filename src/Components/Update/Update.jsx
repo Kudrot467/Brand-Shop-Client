@@ -22,6 +22,7 @@ const Update = () => {
           rating,
           brand_name,
         };
+        console.log(image_url);
         console.log(updatedProduct);
         fetch(`http://localhost:5000/products/${products._id}`, {
             method: "PUT",
@@ -42,6 +43,7 @@ const Update = () => {
         <div className="max-w-7xl mx-auto p-2">
       <div>
         <div>
+            <h2 className="text-3xl font-semibold text-[#AD66D9]">Update Information of {products.name} </h2>
           <form action="" onSubmit={handleUpdateProducts}>
             <div className="form-control">
               <label className="label">
@@ -51,6 +53,7 @@ const Update = () => {
                 type="text"
                 placeholder="Image url"
                 name="image_url"
+                defaultValue={products?.image_url}
                 className="input input-bordered border-[#52BA5D] w-3/4 md:w-full lg:w-1/2"
                 required
               />
@@ -63,6 +66,7 @@ const Update = () => {
                 type="text"
                 placeholder="Name"
                 name="name"
+                defaultValue={products?.name}
                 className="input input-bordered border-[#52BA5D] w-3/4 md:w-full lg:w-1/2"
                 required
               />
@@ -75,6 +79,7 @@ const Update = () => {
                 type="text"
                 placeholder="Brand Name"
                 name="brand_name"
+                defaultValue={products?.brand_name}
                 className="input input-bordered border-[#52BA5D] w-3/4 md:w-full lg:w-1/2"
                 required
               />
@@ -101,6 +106,7 @@ const Update = () => {
                 type="text"
                 placeholder="Price"
                 name="price"
+                defaultValue={products?.price}
                 className="input input-bordered border-[#52BA5D] w-3/4 md:w-full lg:w-1/2"
                 required
               />
@@ -113,6 +119,7 @@ const Update = () => {
                 type="text"
                 placeholder="Short description"
                 name="short_description"
+                defaultValue={products?.short_description}
                 className="input input-bordered border-[#52BA5D] w-3/4 md:w-full lg:w-1/2"
                 required
               />
@@ -125,13 +132,14 @@ const Update = () => {
                 type="text"
                 placeholder="Rating"
                 name="rating"
+                defaultValue={products?.rating}
                 className="input input-bordered border-[#52BA5D] w-3/4 md:w-full lg:w-1/2"
                 required
               />
             </div>
             <input
               type="submit"
-              value="Add Product"
+              value="Update"
               className="btn bg-[#52BA5D] font-medium text-lg text-white "
             />
           </form>
