@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 
 const Brand = ({ brand }) => {
-  console.log(brand);
   const { bpic, bname } = brand;
   return (
     <div>
