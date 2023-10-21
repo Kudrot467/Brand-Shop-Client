@@ -24,7 +24,7 @@ const ProductDetails = () => {
       image_url,
       rating
     };
-    fetch("http://localhost:5000/cart", {
+    fetch("https://1001-brand-server-co5flblq6-roses-projects-57afa947.vercel.app/cart", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(cartItems),

@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       {
         path:'/',
         element:<Home></Home>,
-        loader:()=>fetch('http://localhost:5000/brands')
+        loader:()=>fetch('https://1001-brand-server-co5flblq6-roses-projects-57afa947.vercel.app/brands')
       },
       {
         
@@ -50,22 +50,22 @@ const router = createBrowserRouter([
       {
         path:'/myCart',
         element:<PrivateRoute><MyCart></MyCart></PrivateRoute>,
-        loader:()=>fetch('http://localhost:5000/cart')
+        loader:()=>fetch('https://1001-brand-server-co5flblq6-roses-projects-57afa947.vercel.app/cart')
       },
       {
         path:'/productDetails/:id',
         element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-        loader:()=>fetch('http://localhost:5000/products')
+        loader:()=>fetch('https://1001-brand-server-co5flblq6-roses-projects-57afa947.vercel.app/products')
       },
       {
         path:'/brandDetails/:brand_name',
         element:<BrandDetails></BrandDetails>,
-        loader:()=>fetch('http://localhost:5000/products')
+        loader:()=>fetch('https://1001-brand-server-co5flblq6-roses-projects-57afa947.vercel.app/products')
       },
       {
         path:'/update/:id',
         element:<Update></Update>,
-        loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+        loader:({params})=>fetch(`https://1001-brand-server-co5flblq6-roses-projects-57afa947.vercel.app/products/${params.id}`)
       },
       {
         path:'/informationSamsung',
