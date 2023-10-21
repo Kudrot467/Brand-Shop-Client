@@ -17,6 +17,11 @@ import ProductDetails from './ProductDetails/ProductDetails.jsx';
 import MyCart from './Components/MyCart/MyCart.jsx';
 import PrivateRoute from './Components/PrivateRoutes/PrivateRoutes.jsx';
 import ErrorPage from './Components/ErrorPage/ErrorPage.jsx';
+import InformationSamsung from './Components/InformationSamsung/InformationSamsung.jsx';
+import InformationApple from './Components/InformationApple/InformationApple.jsx';
+import InformationLG from './Components/InformationLG/InformationLG.jsx';
+import InformationGoogle from './Components/InformationGoogle/InformationGoogle.jsx';
+import InformationMI from './Components/InformationMI/InformationMI.jsx';
 
 const router = createBrowserRouter([
   {
@@ -49,7 +54,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/productDetails/:id',
-        element:<ProductDetails></ProductDetails>,
+        element:<PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
         loader:()=>fetch('http://localhost:5000/products')
       },
       {
@@ -61,6 +66,26 @@ const router = createBrowserRouter([
         path:'/update/:id',
         element:<Update></Update>,
         loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+      },
+      {
+        path:'/informationSamsung',
+        element:<InformationSamsung></InformationSamsung>
+      },
+      {
+        path:'/informationApple',
+        element:<InformationApple></InformationApple>
+      },
+      {
+        path:'/informationLG',
+        element:<InformationLG></InformationLG>
+      },
+      {
+        path:'/informationGoogle',
+        element:<InformationGoogle></InformationGoogle>
+      },
+      {
+        path:'/informationMI',
+        element:<InformationMI></InformationMI>
       }
     ]
   },
