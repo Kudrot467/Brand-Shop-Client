@@ -127,7 +127,7 @@ const Navbar = () => {
             }}
             to="/login"
           >
-            <button className="btn bg-[#52BA5D] hover:bg-[#52BA5D] text-white w-full">
+            <button id="login" className="btn bg-[#52BA5D] hover:bg-[#52BA5D] text-white w-full">
               Log In
             </button>
           </NavLink>
