@@ -8,4 +8,4 @@
 __I uploaded my client side code in the server side link by mistake. Sorry for this unwanted situation__
 
 [Live Link Client side](https://brand-shop-7a337.web.app/)
-[Live Link Netlify](https://653a95574c2f291579b798b5--cute-eclair-4ca51e.netlify.app/)
+[Live Link Netlify](https://655f74a0cfd1d80f713ca5d4--cute-eclair-4ca51e.netlify.app)

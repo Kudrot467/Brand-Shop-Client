@@ -57,6 +57,7 @@ const Login = () => {
               <input
                 type="email"
                 placeholder="email"
+                id="email"
                 name="email"
                 className="input input-bordered border-[#52BA5D]"
                 required
@@ -72,6 +73,7 @@ const Login = () => {
                 <input 
                   type={showPassword ? "text" : "password"}
                   placeholder="password"
+                  id="password"
                   name="password"
                   className="input input-bordered w-full border-[#52BA5D]"
                   required
@@ -87,14 +89,14 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <button className="btn text-white hover:bg-[#52BA5D] bg-[#52BA5D]">
+              <button id="login-btn" className="btn text-white hover:bg-[#52BA5D] bg-[#52BA5D]">
                 Login
               </button>
             </div>
           </form>
           <p className="text-center font-medium text-lg text-[#52BA5D]">
             New Applicant ?{" "}
-            <Link className="text-red-400" to="/register">
+            <Link id="register-btn" className="text-red-400" to="/register">
               Register
             </Link>
           </p>
